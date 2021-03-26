@@ -1,40 +1,114 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Fastter Classificados - Escolha a seção</title>
+<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" />
 </head>
 <body>
+	<div>
+		<div class="container-xl">
+			<header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+				<a href="/" class=""><span class="">Fastter Classificados Online</span></a>
+				<a class="btn btn-outline-primary" href="#" role="button">Eletrodomésticos</a>
+				<a class="btn btn-outline-primary" href="#" role="button">Eletroeletrônicos</a>
+				<a class="btn btn-outline-primary" href="#" role="button">Empregos</a>
+				<a class="btn btn-outline-primary" href="#" role="button">Imóveis</a>
+				<a class="btn btn-outline-primary" href="#" role="button">Informática</a>
+				<a class="btn btn-outline-primary" href="#" role="button">Serviços</a>
+				<a class="btn btn-outline-primary" href="#" role="button">Veículos</a>
 
-	<h2>Página de Cadastro de anúncios </h2>
-	<p>Escolhe que tipo de anúncio deseja cadastrar: </p>
-	<br>
-	<p><a href="/cadastro/class01"> Eletrodomésticos </a></p>
-	<p><a href="/cadastro/class02"> Eletroeletrônicos </a></p>
-	<p><a href="/cadastro/class03"> Empregos </a></p>
-	<p><a href="/cadastro/class04"> Imóveis </a></p>
-	<p><a href="/cadastro/class05"> Informática </a></p>
-	<p><a href="/cadastro/class06"> Serviços </a></p>
-	<p><a href="/cadastro/class07"> Veículos </a></p>
-	<br>
-	<p>Retornar para a página inicial <a href="/main">início</a></p>
-	
-<!-- 	<form action="/cadastro/submited" method="POST"> -->
-<!-- 		<label for="categoria">Categoria: </label> -->
-<!-- 			<select id="categoria" name="categoria"> -->
-<!-- 				<option value=""> </option> -->
-<!-- 				<option value="servicos">Serviços </option> -->
-<!-- 				<option value="empregos">Empregos </option> -->
-<!-- 				<option value="eletrodomesticos">Eletrodomésticos </option> -->
-<!-- 				<option value="eletroeletronicos">Eletroeletrônicos </option> -->
-<!-- 				<option value="informatica">Informática </option> -->
-<!-- 				<option value="imoveis">Imóveis </option> -->
-<!-- 				<option value="veiculos">Veículos </option> -->
-<!-- 			</select> <br> -->
-<!-- 		Nome: <input type="text"> <br> -->
-<!-- 		Time: <input type="text"> <br> -->
-<!-- 			<br> -->
-<!-- 			<input type="submit" value="Enviar"> -->
-<!-- 	</form> -->
+			</header>
+		</div>
+		<div class="container-xl">
+			<div class="row justify-content-md-center">
+				<div class="col col-lg-2"></div>
+					<div class="col-md-auto">
+						<h2>Página de Cadastro de anúncios </h2>
+					</div>
+				<div class="col col-lg-2"></div>
+			</div>
+			<div class="row justify-content-md-center">
+				<div class="col col-lg-2"></div>
+					<div class="col-md-auto">
+						<p>Escolhe que tipo de anúncio deseja cadastrar: </p>
+					</div>
+				<div class="col col-lg-2"></div>
+			</div>
+		</div>
+		<div class="container-xl">
+			<div class="container-sm">
+				<div class="row row-cols-3 border-bottom">
+					<div class="">
+						<p></p>
+							<div class="d-grid gap-2">
+								<a class="btn btn-outline-warning" href="/cadastro/class01" role="button">Eletrodomésticos</a>
+							</div>
+						<p></p>
+							<div class="d-grid gap-2">
+								<a class="btn btn-outline-warning" href="/cadastro/class04" role="button">Imóveis</a>
+							</div>
+						<p></p>
+					</div>
+					<div class="">
+						<p></p>
+							<div class="d-grid gap-2">
+								<a class="btn btn-outline-warning" href="/cadastro/class02" role="button">Eletroeletrônicos</a>
+							</div>
+						<p></p>
+							<div class="d-grid gap-2">
+								<a class="btn btn-outline-warning" href="/cadastro/class05" role="button">Informática</a>
+							</div>
+						<p></p>
+							<div class="d-grid gap-2">
+								<a class="btn btn-outline-warning" href="/cadastro/class07" role="button">Veículos</a>
+							</div>
+						<p></p>
+					</div>
+					<div class="">
+						<p></p>
+							<div class="d-grid gap-2">
+								<a class="btn btn-outline-warning" href="/cadastro/class03" role="button">Empregos</a>
+							</div>
+						<p></p>
+							<div class="d-grid gap-2">
+								<a class="btn btn-outline-warning" href="/cadastro/class06" role="button">Serviços</a>
+							</div>
+						<p></p>
+					</div>				
+				</div>
+			</div>
+		</div>
+
+	<!-- 		<br> -->
+	<!-- 		<p><a href="/cadastro/class01"> Eletrodomésticos </a></p> -->
+	<!-- 		<p><a href="/cadastro/class02"> Eletroeletrônicos </a></p> -->
+	<!-- 		<p><a href="/cadastro/class03"> Empregos </a></p> -->
+	<!-- 		<p><a href="/cadastro/class04"> Imóveis </a></p> -->
+	<!-- 		<p><a href="/cadastro/class05"> Informática </a></p> -->
+	<!-- 		<p><a href="/cadastro/class06"> Serviços </a></p> -->
+	<!-- 		<p><a href="/cadastro/class07"> Veículos </a></p> -->
+	<!-- 		<br> -->
+	<!-- 		<p>Retornar para a página inicial <a href="/main">início</a></p> -->
+		
+	<!-- 	<form action="/cadastro/submited" method="POST"> -->
+	<!-- 		<label for="categoria">Categoria: </label> -->
+	<!-- 			<select id="categoria" name="categoria"> -->
+	<!-- 				<option value=""> </option> -->
+	<!-- 				<option value="servicos">Serviços </option> -->
+	<!-- 				<option value="empregos">Empregos </option> -->
+	<!-- 				<option value="eletrodomesticos">Eletrodomésticos </option> -->
+	<!-- 				<option value="eletroeletronicos">Eletroeletrônicos </option> -->
+	<!-- 				<option value="informatica">Informática </option> -->
+	<!-- 				<option value="imoveis">Imóveis </option> -->
+	<!-- 				<option value="veiculos">Veículos </option> -->
+	<!-- 			</select> <br> -->
+	<!-- 		Nome: <input type="text"> <br> -->
+	<!-- 		Time: <input type="text"> <br> -->
+	<!-- 			<br> -->
+	<!-- 			<input type="submit" value="Enviar"> -->
+	<!-- 	</form> -->
+	</div>
+	<script type="text/javascript" src="/javascript/bootstrap.min.js"></script>
 </body>
 </html>

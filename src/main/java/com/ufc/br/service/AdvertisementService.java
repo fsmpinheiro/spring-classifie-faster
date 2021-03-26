@@ -86,4 +86,7 @@ public class AdvertisementService {
 		System.out.println("AdvertisementService output -Anúncio- Id: " + anuncio.getAdNumber() + " _ " + "Categoria: " + anuncio.getAdCategory() + " _ " + "Descrição: " + anuncio.getAdPresentation() + " _ " + "Montadora: " + anuncio.getAdBrand() + " _ "+ "Telefone: " + anuncio.getAdContactPhone() + " _ " + "ReleaseDate: " + anuncio.getAdBirthdate() + " _ " + "Salário: " + anuncio.getAdPrice() + " _ " + "Status: " + anuncio.isAdActiveStatus());
 		advertisementRepository.save(anuncio);
 	}
+	
+	
+	
 }

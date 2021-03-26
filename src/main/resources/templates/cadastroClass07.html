@@ -2,9 +2,23 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Fastter Classificados</title>
 </head>
 <body>
+	<h1>Bem vindo a área de cadastro dos anúncios de Veículos</h1>
+	<h2>Preencha todos os campos a seguir:</h2>
+
+	<br>
+	<form action="/cadastro/submitVeiculoAd" name="" method="POST">
+		<p>Descrição: <input type="text" name="adPresentation"></p>
+		<p>Montadora: <input type="text" name="adBrand"></p>
+		<p>Telefone para contato: <input type="text" name="adContactPhone"></p>
+		<p>Valor: <input type="text" name="adPrice"></p> 
+		<p>Imagens: </p>
+		<p>Enviar anúncio: <input type="submit" value="Enviar"></p>
+	</form>
+	<br>
+	<p>Retornar para a página <a href="/main">inicial</a>.</p>
 
 </body>
 </html>

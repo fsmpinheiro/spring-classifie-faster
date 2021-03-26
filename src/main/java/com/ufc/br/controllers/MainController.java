@@ -21,6 +21,10 @@ public class MainController {
 	public String home2(){
 		return "Main";
 	}
-
+	
+	@RequestMapping("/cadastro")
+	public String cadastro() {
+		return "Cadastro";
+	}
 	
 }
