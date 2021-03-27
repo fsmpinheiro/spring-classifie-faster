@@ -3,22 +3,116 @@
 <head>
 <meta charset="UTF-8">
 <title>Fastter Classificados</title>
+<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" />
 </head>
 <body>
-	<h1>Bem vindo a área de cadastro dos anúncios de Imoveis</h1>
-	<h2>Preencha todos os campos a seguir:</h2>
+	<div>
+	<div class="container-xl bg-light">
+			<header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+				<a href="/" class=""><span class="">Fastter Classificados Online</span></a>
+				<a class="btn btn-outline-primary" href="#" role="button">Eletrodomésticos</a>
+				<a class="btn btn-outline-primary" href="#" role="button">Eletroeletrônicos</a>
+				<a class="btn btn-outline-primary" href="#" role="button">Empregos</a>
+				<a class="btn btn-outline-primary" href="#" role="button">Imóveis</a>
+				<a class="btn btn-outline-primary" href="#" role="button">Informática</a>
+				<a class="btn btn-outline-primary" href="#" role="button">Serviços</a>
+				<a class="btn btn-outline-primary" href="#" role="button">Veículos</a>
 
-	<br>
-	<form action="/cadastro/submitImovelAd" name="" method="POST">
-		<p>Descrição: <input type="text" name="adPresentation"> </p>
-		<p>Bairro: <input type="text" name="adDistrict"></p>
-		<p>Telefone para contato: <input type="text" name="adContactPhone"></p>
-		<p>Valor: <input type="text" name="adPrice"></p> 
-		<p>Imagens: </p>
-		<p>Enviar anúncio: <input type="submit" value="Enviar"></p>
-	</form>
-	<br>
-	<p>Retornar para a página <a href="/main">inicial</a>.</p>
-	
+			</header>
+	</div>
+		<div class="container-xl">
+			<div class="row justify-content-md-center">
+				<div class="col-md-auto">
+					<h1>Bem vindo ao cadastro dos anúncios de Imóveis</h1>
+				</div>
+				<div class="col-md-auto">
+					<h2>Preencha todos os campos a seguir:</h2>
+				</div>
+				<p></p>
+			</div>
+		</div>
+
+
+		<div class="container-xl bg-light border-bottom">
+			<form action="/cadastro/submitImovelAd" name="" method="POST">
+				
+				<div class="form-row row align-items-center">
+						<label for="inputDescrição" class="col-sm-1 col-form-label">
+							Descrição:
+						</label>
+						<div class="col-sm-10">
+							<textarea class="form-control" name="adPresentation" placeholder="Descreva aqui o seu anúncio " rows="4" required></textarea>
+						</div>
+				</div>
+				<p></p>
+				<div class="form-row row align-items-center">
+					<label  class="col-auto col-form-label">
+						Bairro/Distrito do imóvel:
+					</label>
+					<div class="col-md-5">
+						<input class="form-control" type="text" name="adDistrict" placeholder="Em que bairro o imóvel está localizado" required>
+					</div>
+				</div>
+				<p></p>				
+				<div class="form-row row align-items-center">
+					<label  class="col-sm-2 col-form-label">
+						Telefone para contato:
+					</label>
+					<div class="col-sm-3">
+						<input class="form-control" type="text" name="adContactPhone" placeholder="88-98888-8888" required>
+					</div>
+					
+					<label  class="col-sm-1 col-form-label">
+						Valor:
+					</label>
+					<div class="col-sm-3">
+						<input class="form-control" type="text" name="adPrice" placeholder="R$ 999,99" required>
+					</div>
+				</div>
+				<p></p>
+				<div class="form-row row align-items-center">
+					<div class="row justify-content-md-center">
+						<div class="col-auto">
+						<p>- Aqui faça o upload de imagens para o seu imóvel -</p>
+						</div>
+					</div>
+					<p></p>
+					<div class="form-group">
+						<label for="exampleFormControlFile1">Imagem 1</label> 
+						<input type="file" class="form-control-file" id="exampleFormControlFile1">
+					</div>
+					<p></p>
+					<div class="form-group">
+						<label for="exampleFormControlFile1">Imagem 2</label> 
+						<input type="file" class="form-control-file" id="exampleFormControlFile1">
+					</div>
+					<p></p>
+					<div class="form-group">
+						<label for="exampleFormControlFile1">Imagem 3</label> 
+						<input type="file" class="form-control-file" id="exampleFormControlFile1">
+					</div>
+				
+				</div>
+				<p></p>
+
+				<div class="">
+					<div class="row justify-content-md-center">
+						<div class="col-4">
+							<input class="btn btn-success" type="submit" value="Enviar anúncio">
+						</div>
+
+						<div class="col-2">
+							<a class="btn btn-outline-secondary" href="/cadastro" role="button">Cancelar anúncio</a>
+						</div>
+					</div>
+					
+				</div>
+				<p></p>
+				
+
+			</form>
+		</div>
+	</div>
+	<script src="/javascript/bootstrap.min.js">  </script>
 </body>
 </html>

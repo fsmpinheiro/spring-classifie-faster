@@ -7,7 +7,7 @@
 </head>
 <body>
 	<div>
-		<div class="container-xl">
+		<div class="container-xl bg-light">
 			<header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
 				<a href="/" class=""><span class="">Fastter Classificados Online</span></a>
 				<a class="btn btn-outline-primary" href="#" role="button">Eletrodomésticos</a>
@@ -22,10 +22,11 @@
 		</div>
 		<div class="container border-bottom">
 			<div class="row justify-content-md-center">
-				<div class="col "></div>
-					<div class="col col-5 align-items-center">
-						<h1>Página inicial</h1>
-					</div>
+				<div class="col ">
+				</div>
+				<div class="col col-5 align-items-center">
+					<h1>Página inicial</h1>
+				</div>
 					
 				<div class="col col-lg-2">
 					<a class="btn btn-outline-secondary" href="/cadastro" role="button">Cadastrar anúncio</a>
@@ -39,8 +40,70 @@
 				<div class="col col-lg-2"></div>
 			</div>
 		</div>
-
-		<p>Anúncios ativos:</p>
+		
+		<div class="container-xl">
+			<div class="row justify-content-md-center">
+				<div class="col-md-auto">
+							<p>Anúncios ativos no momento:</p>
+				</div>
+			</div>
+					
+			<form action="#" th:action="@{/listar}"  method="POST">
+					<table class="table table-hover table-dark" >
+						<tr th:each = "anuncio : ${listOfAds}"> 
+					      <td th:text="${anuncio.adNumber}"></td>
+					      <td th:text="${anuncio.category}"></td>
+					      <td th:text="${anuncio.adNumber}"></td>
+					      <td th:text="${anuncio.adContactPhone}"></td>
+					    </tr>
+					
+					
+					
+					
+					
+					
+<!-- 					  <thead > -->
+<!-- 					    <tr> -->
+<!-- 					      <th scope="col">adNumber</th> -->
+<!-- 					      <th scope="col">category</th> -->
+<!-- 					      <th scope="col">adContactPhone</th> -->
+<!-- 					      <th scope="col">adActiveStatus</th> -->
+<!-- 					    </tr> -->
+<!-- 					  </thead> -->
+					  
+<!-- 					  <tbody> -->
+<!-- 					    <tr th:each = "anuncio : ${listOfAds}"> -->
+<!-- 					      <td th:text="${anuncio.adNumber}"></td> -->
+<!-- 					      <td th:text="${anuncio.category}"></td> -->
+<!-- 					      <td th:text="${anuncio.adNumber}"></td> -->
+<!-- 					      <td th:text="${anuncio.adContactPhone}"></td> -->
+<!-- 					    </tr> -->
+					    
+<!-- 					  </tbody> -->
+					</table>
+			</form>
+<!-- 			<table class="table table-hover table-dark" > -->
+<!-- 			  <thead > -->
+<!-- 			    <tr> -->
+<!-- 			      <th scope="col">adNumber</th> -->
+<!-- 			      <th scope="col">category</th> -->
+<!-- 			      <th scope="col">adContactPhone</th> -->
+<!-- 			      <th scope="col">adActiveStatus</th> -->
+<!-- 			    </tr> -->
+<!-- 			  </thead> -->
+			  
+<!-- 			  <tbody> -->
+<!-- 			    <tr th:each = "anuncio : ${listOfAds}"> -->
+<!-- 			      <td th:text="${anuncio.adNumber}"></td> -->
+<!-- 			      <td th:text="${anuncio.category}"></td> -->
+<!-- 			      <td th:text="${anuncio.adNumber}"></td> -->
+<!-- 			      <td th:text="${anuncio.adContactPhone}"></td> -->
+<!-- 			    </tr> -->
+			    
+<!-- 			  </tbody> -->
+<!-- 			</table> -->
+		</div>
+		
 		
 		
 		

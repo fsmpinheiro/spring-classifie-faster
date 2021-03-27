@@ -1,5 +1,7 @@
 package com.ufc.br.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -86,6 +88,17 @@ public class AdvertisementService {
 		System.out.println("AdvertisementService output -Anúncio- Id: " + anuncio.getAdNumber() + " _ " + "Categoria: " + anuncio.getAdCategory() + " _ " + "Descrição: " + anuncio.getAdPresentation() + " _ " + "Montadora: " + anuncio.getAdBrand() + " _ "+ "Telefone: " + anuncio.getAdContactPhone() + " _ " + "ReleaseDate: " + anuncio.getAdBirthdate() + " _ " + "Salário: " + anuncio.getAdPrice() + " _ " + "Status: " + anuncio.isAdActiveStatus());
 		advertisementRepository.save(anuncio);
 	}
+
+	public List<Advertisement> listAllAds() {
+		return advertisementRepository.findAll();
+	}
+
+//	public List<Advertisement> listOfMostRecents() {
+//		
+//		
+//		
+//		return advertisementRepository.;
+//	}
 	
 	
 	
