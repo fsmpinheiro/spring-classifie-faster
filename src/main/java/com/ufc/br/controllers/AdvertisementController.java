@@ -1,13 +1,8 @@
 package com.ufc.br.controllers;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.servlet.ModelAndView;
-
-import com.ufc.br.model.Advertisement;
 import com.ufc.br.model.Eletrodomesticos;
 import com.ufc.br.model.Eletroeletronicos;
 import com.ufc.br.model.Empregos;
@@ -25,8 +20,6 @@ public class AdvertisementController {
 	private AdvertisementService advertisementService;
 
 	
-
-
 			//---Início Cadastro de anúncios da Class01:Eletrodomésticos	
 	@RequestMapping("/class01")
 	public String formEletrodomesticoAd() {
@@ -131,20 +124,6 @@ public class AdvertisementController {
 			//---Fim Cadastro de anúncios da Class07: Veiculos
 	
 	
-	
-//	@RequestMapping("/listmostrecents")
-//	public String listrecents(){
-//		List<Advertisement> anuncios = advertisementService.listOfMostRecents();
-//		
-//		return "adslist";
-//	}
-	@RequestMapping("/listar")
-	public ModelAndView listar(){
-		List<Advertisement> anuncios = advertisementService.listAllAds();
-		ModelAndView modelv = new ModelAndView( "PaginaLista" );
-		modelv.addObject("listOfAds", anuncios);
-		
-		return modelv;
-	}
+
 	
 }

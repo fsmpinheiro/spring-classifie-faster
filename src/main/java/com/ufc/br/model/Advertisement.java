@@ -24,7 +24,7 @@ public class Advertisement {
 	private Long adNumber;
 	private String adName;
 	
-	@Column(insertable = false, updatable = false)
+	@Column(insertable = true , updatable = true)
 	private String adCategory;
 	private String adPresentation;
 	private String adContactPhone;

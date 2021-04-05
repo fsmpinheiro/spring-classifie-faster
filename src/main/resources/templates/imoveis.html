@@ -25,7 +25,7 @@
 				<div class="col ">
 				</div>
 				<div class="col col-5 align-items-center">
-					<h1>Página inicial</h1>
+					<h1>Imóveis</h1>
 				</div>
 					
 				<div class="col col-lg-2">
@@ -52,11 +52,14 @@
 			<table class="table table-hover table-dark">
 
 				<tbody>
-<!-- 					<tr th:if="${books.empty}"> -->
-<!--             			<td colspan="2"> Nenhum cadastro ativo no momento </td> -->
-<!--         			</tr> -->
+					<tr th:if="${listOfClass04Ads.empty}">
+					<td ></td><td ></td><td ></td>
+					<td ></td><td ></td><td ></td>
+					<td ></td><td ></td><td colspan="2"></td><td colspan="2"></td><td colspan="2"></td>
+            			<td colspan="6"> Nenhum cadastro ativo no momento </td>
+        			</tr>
 				
-					<tr th:each="anuncio : ${listOfAds}">
+					<tr th:each="anuncio : ${listOfClass04Ads}">
 <!-- 						<td th:text="${anuncio.adNumber}"></td> -->
 						
 						<td th:text="${anuncio.adCategory}"></td>
@@ -64,6 +67,8 @@
 						<td th:text="${anuncio.adContactPhone}"></td>
 						
 						<td th:text="${anuncio.adPresentation}"></td>
+						
+						<td th:text="${anuncio.adDistrict}"></td>
 					</tr>
 				
 				</tbody>

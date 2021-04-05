@@ -28,6 +28,9 @@ public class AdvertisementService {
 	
 	public void EletrodomesticoAdSubmit (Eletrodomesticos anuncio) {
 		anuncio.setAdCategory( "Eletrodomésticos" );
+		//anuncio.setAdCategory("nenhuma");
+		
+		
 		anuncio.setAdBirthdate(java.time.LocalDateTime.now());
 		anuncio.setAdActiveStatus(true);
 		
@@ -81,7 +84,7 @@ public class AdvertisementService {
 	}
 	
 	public void VeiculosAdSubmit ( Veiculos anuncio ) {
-		anuncio.setAdCategory( "Serviços" );
+		anuncio.setAdCategory( "Veículos" );
 		anuncio.setAdBirthdate(java.time.LocalDateTime.now());
 		anuncio.setAdActiveStatus(true);
 		
@@ -89,17 +92,41 @@ public class AdvertisementService {
 		advertisementRepository.save(anuncio);
 	}
 
+	
+	
+	
+	
+	
 	public List<Advertisement> listAllAds() {
 		return advertisementRepository.findAll();
 	}
 
-//	public List<Advertisement> listOfMostRecents() {
-//		
-//		
-//		
-//		return advertisementRepository.;
-//	}
+	public List<Advertisement> listAllEletrodomesticos() {
+		return advertisementRepository.findByAdCategory("Eletrodomésticos");
+	}
+
+	public List<Advertisement> listAllEletroeletronicos() {
+		return advertisementRepository.findByAdCategory("Eletroeletronicos");
+	}
 	
+	public List<Advertisement> listAllEmpregos() {
+		return advertisementRepository.findByAdCategory("Empregos");
+	}
+
+	public List<Advertisement> listAllImoveis() {
+		return advertisementRepository.findByAdCategory("Imoveis");
+	}
 	
+	public List<Advertisement> listAllInformatica() {
+		return advertisementRepository.findByAdCategory("Informatica");
+	}
+
+	public List<Advertisement> listAllServicos() {
+		return advertisementRepository.findByAdCategory("Servicos");
+	}
+	
+	public List<Advertisement> listAllVeiculos() {
+		return advertisementRepository.findByAdCategory("Veículos");
+	}
 	
 }
